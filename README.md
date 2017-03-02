@@ -14,15 +14,15 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: './camera_cal/calibration1.jpg' "Original1 Image"
-[image2]: './camera_cal/undistorted.jpg' "Undistorted Image"
-[image3]: './test_images/test5.jpg' "Original2 Image"
-[image4]: './test_images/test5.jpg_color_binary.png' "Color Binary Image"
-[image5]: './output_images/straight_line1_warped_binary.png' "Binary Warped"
-[image6]: './output_images/histogram_output.png' "Histogram"
-[image7]: './output_images/search.png' "Search"
-[image8]: './output_images/result.png' "TestImResult"
-
+[image1]: ./camera_cal/calibration1.jpg "Original1 Image"
+[image2]: ./camera_cal/undistorted.jpg "Undistorted Image"
+[image3]: ./test_images/test5.jpg "Original2 Image"
+[image4]: ./output_images/test5.jpg_color_binary.png "Color Binary Image"
+[image5]: ./output_images/straight_line1_warped_binary.png "Binary Warped"
+[image6]: ./output_images/histogram_output.png "Histogram"
+[image7]: ./output_images/search.png "Search"
+[image8]: ./output_images/result.png "TestImResult"
+[image9]: ./output_images/test5.jpg_combined_binary.png "TestImResult" 
 
 ### [Rubric](https://review.udacity.com/#!/rubrics/571/view) Points
 
@@ -56,7 +56,7 @@ To find most image features in recognizable conditions for further value extract
 
 | Source Image             | Colored Binary Image        | Binary Image               |
 |:------------------------:|:---------------------------:|:--------------------------:| 
-| ![original image][image1]| ![color bin image][image2]  |![comb image][image2]       | 
+| ![original image][image3]| ![color bin image][image4]  |![comb image][image9]       | 
 
 
 #### 3. Perspective transform, "Bird-eye view"
@@ -69,7 +69,7 @@ After determination of these matrices `cv2.warpPerspective` has been used and be
 
 | Source Image             | Warped Image                | 
 |:------------------------:|:---------------------------:|
-| ![original image][image1]| ![color bin image][image5]  |
+| ![original image][image3]| ![color bin image][image5]  |
 
 This resulted in the following source and destination points:
 
@@ -110,7 +110,7 @@ I implemented this step in lines # through # in my code in function`visualizeWei
 
 #### 1. Result of test video
 
-Here's a [link to my video result](./undst_verified_project_output_video.mp4)
+Here's a [link to my video result](./project_video_output.mp4)
 
 ---
 

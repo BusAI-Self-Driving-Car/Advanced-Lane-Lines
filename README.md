@@ -14,15 +14,14 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: './Users/eren/CarND-Advanced-Lane-Lines/camera_cal/calibration1.jpg' "Original1 Image"
-[image2]: './Users/eren/CarND-Advanced-Lane-Lines/camera_cal/camera_cal/undistorted.jpg' "Undistorted Image"
-[image3]: './Users/eren/CarND-Advanced-Lane-Lines/test_images/test5.jpg' "Original2 Image"
-[image4]: './Users/eren/CarND-Advanced-Lane-Lines/test_images/test5.jpg_color_binary.png' "Color Binary Image"
-[image5]: './Users/eren/CarND-Advanced-Lane-Lines/output_images/straight_line1_warped_binary.png' "Binary Warped"
-[image6]: './Users/eren/CarND-Advanced-Lane-Lines/output_images/histogram_output.png' "Histogram"
-[image7]: './Users/eren/CarND-Advanced-Lane-Lines/output_images/search.png' "Search"
-
-[image8]: './Users/eren/CarND-Advanced-Lane-Lines/output_images/result.png' "TestImResult"
+[image1]: './camera_cal/calibration1.jpg' "Original1 Image"
+[image2]: './camera_cal/undistorted.jpg' "Undistorted Image"
+[image3]: './test_images/test5.jpg' "Original2 Image"
+[image4]: './test_images/test5.jpg_color_binary.png' "Color Binary Image"
+[image5]: './output_images/straight_line1_warped_binary.png' "Binary Warped"
+[image6]: './output_images/histogram_output.png' "Histogram"
+[image7]: './output_images/search.png' "Search"
+[image8]: './output_images/result.png' "TestImResult"
 
 
 ### [Rubric](https://review.udacity.com/#!/rubrics/571/view) Points

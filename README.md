@@ -94,11 +94,15 @@ Bird-eyed view lane then later thresholded for now to detect lane-lines. Thresho
 
 By determination of starting point of lane line in a frame, window searching is implemented for efficient determination of full lane-line points. `sliding_window_search` function looks for minimum number of pixel consists a "1" in defined box and it starts from the previous window to look around. By doing this approach curvy or dashed lane points can be appended in a lane-line array for polynomial fit. 
 
-#### 5. Radius of curvature calculations
+#### 5. Improvements for jittery lane detections
+
+Frame by frame lane line detections could cause non-accurate detections as well. Base coordinate detections from histogram plot peaks may be wrongly detected or sliding windows may follow wrong curvatures that caused by a shadow or patch on the road. To overcome this issues base lane line buffers and curvature buffers are defined. These buffers are searching for verified detections and recording their values into the array. When there is wrongly determined lane line occur, its base line coordinates and curvature used from previous frame. Here criteria for base line coordinates is lane width and for the curvature is %85 correlation with previous curvature.
+
+#### 6. Radius of curvature calculations
 
 I did this in lines # through # in my code in function `radius_of_curvature`
 
-#### 6. Result of test an image
+#### 7. Result of test an image
 
 I implemented this step in lines # through # in my code in function`visualizeWeighted` of pipeline.  Here is an example of my result on a test image:
 
@@ -118,6 +122,6 @@ Here's a [link to my video result](./project_video_output.mp4)
 
 #### 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 
-Here in this project advanced thresholding techniques for better acquire image feature and make lane-lines clear are implemented. Sobel edge detection with x-axis gradients or y-axis gradients are studied. Color thresholding has been used for different color spaces. Perspective transform has been used for to use histogram counting method to easily find starting point of lane-line. Then sliding window search technique is implemented for more efficient 2nd order polynomial curvature on to the lane. And finally by using camera undistortion how much car is deviation during a ride with respect to lane center is written on test video result.
+Here in this project advanced thresholding techniques for better acquisition of image features and for making lane-lines more clear are implemented. Sobel edge detection with x-axis gradients or y-axis gradients are studied. Color thresholding has been used for different color spaces. Perspective transform has been used for to use histogram counting method to easily find starting point of lane-line. Then sliding window search technique is implemented for more efficient 2nd order polynomial curvature on to the lane. And finally by using camera undistortion how much car is deviation during a ride with respect to lane center is written on test video result.
 
-This study requires many more approaches to make it more robust on harder cases. Lane-line smoothing and implementation of sanity checks for wrong determination of lanes in some frames should be replaced with a lane-line is already verified at past.
+This study requires many more approaches to make it more robust on harder cases. Lane-line smoothing and implementation of sanity checks for wrong determination of lanes in some frames is replaced with a lane-line is already verified at past.

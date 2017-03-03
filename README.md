@@ -114,7 +114,7 @@ I implemented this step in lines # through # in my code in function`visualizeWei
 
 #### 1. Result of test video
 
-Here's a [link to my video result](./project_video_output.mp4)
+Here's a [link to my video result](./project_output_video.mp4)
 
 ---
 
